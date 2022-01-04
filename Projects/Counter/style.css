@@ -51,13 +51,14 @@ button{
     border-radius: 5px;
     padding: 10px 10px;
     border: 2px solid black;
+    background: black;
+    color: white;
     transition: 0.3s background;
     font-family: 'VT323', monospace;
     font-size: x-large;
 }
 button:hover{
-    color: white;
-    background: black;
+    background: purple;
 }
 button:active{
     background: purple;
@@ -69,4 +70,37 @@ h1{
 #value{
     font-size: 150px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-center{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-links li{
+        margin-top: 10px;
+    }
+    .nav-links li a{
+        margin-left: 0px;
+        padding: 0;
+    }
+    h2{
+        padding: 20px 10px;
+        font-size: large;
+    }
+    button{
+        font-size: large;
+        width: 100px;
+        padding: 10px 5px;
+    }
+    h4{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
 }
