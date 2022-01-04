@@ -11,9 +11,62 @@ header{
     box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px 1px;
     padding: 5px 0;
 }
+main{
+    display: flex;
+    justify-content: space-between;
+}
 
 section{
-    padding: 20px;
-    font-size: large;
-    
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: large;  
+
+}
+
+#help-section{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.479);
+    border-top: 2px solid rgba(0, 0, 0, 0.329);
+    border-left: 2px solid rgba(0, 0, 0, 0.397);
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px 40px;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    main{
+        flex-direction: column;
+    }
+    #help-section{
+        border-bottom: none;
+        border-top: 2px solid rgba(0, 0, 0, 0.329);
+        border-left: none;
+        border-radius: 0px;
+    }
+}
+
+.level-title{
+    display: flex;
+    align-items: center;
+}
+.fa-js-square{
+    color: green;
+    margin-right: 20px;
+}
+.level-title h2{
+    border-bottom: 2px solid black;
+}
+
+.projects li{
+    margin: 10px;
+}
+.projects li a{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.projects li a:hover{
+    background: rgba(0, 0, 0, 0.568);
+    color: white;
 }
