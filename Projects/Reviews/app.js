@@ -14,14 +14,14 @@ const reviews = [
         name: "Anna Johnson",
         job: "Web Designer",
         img: "/Projects/Reviews/img/girl2.jpg",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
+        text: "Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
     },
     {
         id: 3,
         name: "Bill Anderson",
         job: "The Boss",
         img: "/Projects/Reviews/img/boy1.jpg",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
+        text: "Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
     }
 ]
 
@@ -41,7 +41,7 @@ let currentItem = 0;
 
 //Load initial item
 window.addEventListener('DOMContentLoaded',function(){
-    changeReview();
+    changeReview(currentItem);
 })
 
 prev_btn.addEventListener('click',function(){
@@ -49,7 +49,7 @@ prev_btn.addEventListener('click',function(){
     if (currentItem < 0){
         currentItem = reviews.length - 1;
     }
-    changeReview();
+    changeReview(currentItem);
 })
 
 next_btn.addEventListener('click',function(){
@@ -57,18 +57,19 @@ next_btn.addEventListener('click',function(){
     if (currentItem == reviews.length){
         currentItem = 0;
     }
-    changeReview();
+    changeReview(currentItem);
 })
 
 random_btn.addEventListener('click',function(){
     //Random number
     currentItem = Math.floor(Math.random()*reviews.length)
-    changeReview();
+    changeReview(currentItem);
 })
 
-function changeReview(){
-    const item = reviews[currentItem];
+function changeReview(person){
+    const item = reviews[person];
     img.src = item.img;
     job.textContent = item.job.toUpperCase();
     author.textContent = item.name;
+    info.textContent = item.text;
 }
