@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    background: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'VT323', monospace;
+}
+
+header{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px 1px;
+    padding: 5px 0;
+}
+
+section{
+    padding: 20px;
+    font-size: large;
+    
+}
