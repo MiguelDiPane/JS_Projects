@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e2e4f541a2.js" crossorigin="anonymous"></script>
     <title>Reviews</title>
 </head>
 <body>
@@ -23,21 +24,36 @@
                 <h2>Our reviews</h2>
                 <div class="underline"></div>
             </div>
+           
             <!--Review-->
             <article class="review">
                 <div class="img-container">
-                    <img src="/Projects/Reviews/img/girl1.jpg" alt="profile photo" class="profile-image">
+                    <img src="/Projects/Reviews/img/girl1.jpg" alt="profile photo" class="profile-image" id="person-img">
                 </div>
                 <h4 id="author">Sara Jones</h4>
                 <p id="job">UX DESIGNER</p>
                 <p id="info">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati, provident autem dolorem veniam sequi amet possimus culpa unde.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati.
                 </p>
+
+                <!--Prev next buttons -->
+                <div class="btn-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Random button -->
+                <button class="random-btn">Suprise me</button>
+
             </article>
         </section>
     </main>
 
     <!--JavaScript-->
-    <script src="counter.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

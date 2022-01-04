@@ -42,11 +42,17 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
     margin-top: 50px;
     padding-left: 20vw;
     padding-right: 20vw;
 }
+
+@media only screen and (max-width: 900px) {
+    .container {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+  }
 
 button{
     width: 150px;
@@ -81,6 +87,7 @@ button:active{
 
 .review{
     margin: 50px 0;
+    padding: 20px;
     width: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -101,7 +108,35 @@ button:active{
     color: rgb(72, 177, 218);
 }
 #info{
-    margin-left: 20px;
-    margin-right: 20px;
     line-height: 20px;
+}
+
+.prev-btn,
+.next-btn{
+    background: none;
+    border: none;
+    padding: 5px;
+    width: 30px;
+    color: rgb(72, 177, 218);
+    transition: 0.3s color;
+}
+.prev-btn:hover,
+.next-btn:hover{
+    color: rgb(42, 106, 131);
+    background: none;
+}
+
+.random-btn{
+    width: 150px;
+    font-size: medium;
+    background: none;
+    border-color: rgb(72, 177, 218);
+    color: rgb(72, 177, 218);
+    transition: 0.3s background;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.random-btn:hover{
+    background: rgb(72, 177, 218);
+    color: white;
 }

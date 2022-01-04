@@ -1,0 +1,74 @@
+//Local reviews data
+
+const reviews = [
+    {
+        id: 1,
+        name: "Susan Smith",
+        job: "Web Developer",
+        img: "/Projects/Reviews/img/girl1.jpg",
+        //Se debe sacar de ajax el text
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
+    },
+    {
+        id: 2,
+        name: "Anna Johnson",
+        job: "Web Designer",
+        img: "/Projects/Reviews/img/girl2.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
+    },
+    {
+        id: 3,
+        name: "Bill Anderson",
+        job: "The Boss",
+        img: "/Projects/Reviews/img/boy1.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
+    }
+]
+
+//Select items
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+
+//Buttons
+const prev_btn = document.querySelector('.prev-btn');
+const next_btn = document.querySelector('.next-btn');
+const random_btn = document.querySelector('.random-btn');
+
+//Set starting item
+let currentItem = 0;
+
+//Load initial item
+window.addEventListener('DOMContentLoaded',function(){
+    changeReview();
+})
+
+prev_btn.addEventListener('click',function(){
+    currentItem--;
+    if (currentItem < 0){
+        currentItem = reviews.length - 1;
+    }
+    changeReview();
+})
+
+next_btn.addEventListener('click',function(){
+    currentItem++;
+    if (currentItem == reviews.length){
+        currentItem = 0;
+    }
+    changeReview();
+})
+
+random_btn.addEventListener('click',function(){
+    //Random number
+    currentItem = Math.floor(Math.random()*reviews.length)
+    changeReview();
+})
+
+function changeReview(){
+    const item = reviews[currentItem];
+    img.src = item.img;
+    job.textContent = item.job.toUpperCase();
+    author.textContent = item.name;
+}
