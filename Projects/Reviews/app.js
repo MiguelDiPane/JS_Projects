@@ -5,7 +5,7 @@ const reviews = [
         id: 1,
         name: "Susan Smith",
         job: "Web Developer",
-        img: "Projects/Reviews/img/girl1.jpg",
+        img: "https://loremflickr.com/g/320/240/man",
         //Se debe sacar de ajax el text
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
     },
@@ -13,14 +13,14 @@ const reviews = [
         id: 2,
         name: "Anna Johnson",
         job: "Web Designer",
-        img: "Projects/Reviews/img/girl2.jpg",
+        img: "https://loremflickr.com/g/320/240/girl",
         text: "Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati."
     },
     {
         id: 3,
         name: "Bill Anderson",
         job: "The Boss",
-        img: "Projects/Reviews/img/boy1.jpg",
+        img: "https://loremflickr.com/g/320/240/boy",
         text: "Voluptatum nobis dolores natus tenetur temporibus animi laudantium nostrum totam in, officiis obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
     }
 ]
